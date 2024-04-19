@@ -19,15 +19,15 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="相较于webpack，采用不同的运行方式  Webpack通过先将整个应用打包，再将打包后代码提供给dev server，开发者才能开始开发。 Vite直接将源码交给浏览器，实现dev server秒开，浏览器显示页面需要相关模块时，再向dev server发起请求，服务器简单处理后，将该模块返回给浏览器，实现真正意义的按需加载。  基本语法 1 安装开发依赖vite 2 vite的源码目录就是跟">
+    <meta name="description" content="1 相较于webpack，采用不同的运行方式  Webpack通过先将整个应用打包，再将打包后代码提供给dev server，开发者才能开始开发。 Vite直接将源码交给浏览器，实现dev server秒开，浏览器显示页面需要相关模块时，再向dev server发起请求，服务器简单处理后，将该模块返回给浏览器，实现真正意义的按需加载。  2 基本语法 1 安装开发依赖vite 2 vite的源码目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vite初识">
 <meta property="og:url" content="http://example.com/2022/11/19/vite/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="相较于webpack，采用不同的运行方式  Webpack通过先将整个应用打包，再将打包后代码提供给dev server，开发者才能开始开发。 Vite直接将源码交给浏览器，实现dev server秒开，浏览器显示页面需要相关模块时，再向dev server发起请求，服务器简单处理后，将该模块返回给浏览器，实现真正意义的按需加载。  基本语法 1 安装开发依赖vite 2 vite的源码目录就是跟">
+<meta property="og:description" content="1 相较于webpack，采用不同的运行方式  Webpack通过先将整个应用打包，再将打包后代码提供给dev server，开发者才能开始开发。 Vite直接将源码交给浏览器，实现dev server秒开，浏览器显示页面需要相关模块时，再向dev server发起请求，服务器简单处理后，将该模块返回给浏览器，实现真正意义的按需加载。  2 基本语法 1 安装开发依赖vite 2 vite的源码目">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-11-19T01:15:00.000Z">
-<meta property="article:modified_time" content="2024-04-19T08:45:20.932Z">
+<meta property="article:modified_time" content="2024-04-19T08:47:30.683Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="vite">
 <meta name="twitter:card" content="summary">
@@ -492,12 +492,12 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <p><strong>相较于webpack，采用不同的运行方式</strong></p>
+        <p>1 <strong>相较于webpack，采用不同的运行方式</strong></p>
 <ul>
 <li>Webpack通过先将整个应用打包，再将打包后代码提供给dev server，开发者才能开始开发。</li>
 <li>Vite直接将源码交给浏览器，实现dev server秒开，浏览器显示页面需要相关模块时，再向dev server发起请求，服务器简单处理后，将该模块返回给浏览器，实现真正意义的按需加载。</li>
 </ul>
-<p><strong>基本语法</strong></p>
+<p>2 <strong>基本语法</strong></p>
 <pre><code>1 安装开发依赖vite
 2 vite的源码目录就是跟目录
 开发命令
@@ -507,7 +507,7 @@
     vite preview 预览打包代码
 配置文件vite.config.js
 </code></pre>
-<p><strong>原理</strong></p>
+<p>3 <strong>原理</strong></p>
 <p>基于esbuild与Rollup，依靠浏览器自身ESM编译功能</p>
 <ul>
 <li><p><strong>ESbuild 编译</strong>：esbuild 使用go编写，cpu密集下更具性能优势，编译速度更快</p>
@@ -528,13 +528,13 @@
 <p>  浏览器import只能引入相对&#x2F;绝对路径，而开发代码经常使用npm包名直接引入node_module中的模块，需要做路径转换后交给浏览器。</p>
 </li>
 </ul>
-<p><strong>不足</strong></p>
+<p>4 <strong>不足</strong></p>
 <ul>
 <li>Vue仍为第一优先支持，量身定做的编译插件，对React的支持不如Vue强大。</li>
 <li>虽然已经推出2.0正式版，已经可以用于正式线上生产，但目前市场上实践少。</li>
 <li>生产环境集成Rollup打包，与开发环境最终执行的代码不一致。</li>
 </ul>
-<p><strong>优势</strong></p>
+<p>5 <strong>优势</strong></p>
 <ul>
 <li>快！快！非常快！！</li>
 <li>高度集成，开箱即用。</li>
