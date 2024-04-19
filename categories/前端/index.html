@@ -469,14 +469,14 @@
         <article class="index-post">
             <a class="abstract-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">
                 
-                <span class="abstract-title-text">理解中间件</span>
+                <span class="abstract-title-text">通过scroll懒加载出错</span>
             </a>
             <div class="abstract-content">
                 当用 scrollTop+clientHeight &#x3D; scrollHeight 条件判断页面是否滚动到底时后端十页数据只加载了五页。
 原因：
 scrollHeight会四舍五入，每次滚动有0.1的小数被舍掉，所以第五页的时候左右等式不成立，导致无法加载后面数据
 解决方案：
-1.使用一下等式
+1.使用以下等式
 scrollHeight - clientHeight - scrollTop &lt;= 1
 
 2.使用vueuse的useInfiniteScroll
@@ -610,7 +610,7 @@ scrollHeight - clientHeight - scrollTop &lt;= 1
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/18</span>
-            <a class="archive-post-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">理解中间件</a>
+            <a class="archive-post-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">通过scroll懒加载出错</a>
         </li>
     
         
