@@ -19,18 +19,23 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/index.html">
+    <meta name="description" content="解决github推送错误 remote: Support for password authentication was removed on August 13, 2021.推送github仓库代码，输入完账号密码出现： remote: Support for password authentication was removed on August 13, 2021. remote: Plea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="元素居中">
+<meta property="og:url" content="http://example.com/2021/10/27/github%E6%8E%A8%E9%80%81%E9%94%99%E8%AF%AF/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="解决github推送错误 remote: Support for password authentication was removed on August 13, 2021.推送github仓库代码，输入完账号密码出现： remote: Support for password authentication was removed on August 13, 2021. remote: Plea">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-10-27T02:15:00.000Z">
+<meta property="article:modified_time" content="2024-04-19T09:23:45.438Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="github">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>Wooup&#39;s Blog</title>
+    <title>元素居中 · Wooup&#39;s Blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -218,6 +223,8 @@
         }
     </script>
     
+        <body class="post-body">
+    
         <!-- header -->
         <header class="header header-mobile">
     <!-- top read progress line -->
@@ -247,6 +254,17 @@
     </div>
     <!-- toggle banner for post layout -->
     
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">Wooup&#39;s Blog.</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">元素居中</a>
+            </div>
+        </div>
+    
 </header>
 
         <!-- fixed footer -->
@@ -273,24 +291,76 @@
 
 
 
+    height:50vh;
+
 ">
     
     <!-- 主页  -->
     
+        
+    <!-- 404页  -->
+    
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+                元素居中
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+                
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="github">github</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2021/10/27</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -420,92 +490,61 @@
 
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
-                <main class="main index-page">
+                <main class="main post-page">
+    <article class="article-entry">
+        <p>解决github推送错误 remote: Support for password authentication was removed on August 13, 2021.<br>推送github仓库代码，输入完账号密码出现：</p>
+<pre><code>remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+</code></pre>
+<p>是因为自从 21 年 8 月 13 后不再支持用户名密码的方式验证了，需要创建个人访问令牌(personal access token)。<br>解决办法如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">在 GitHub 上生成令牌，应用于所需的仓库中</span><br><span class="line">    1.点击 settings</span><br><span class="line">2.点击右侧的 Developer settings</span><br><span class="line">3.点击 Personal access tokens(个人访问令牌)</span><br><span class="line">4.点击 Generate new token</span><br><span class="line">5.设置 token 信息</span><br><span class="line">6.根据所需过期时间，建议设置成永远，以免麻烦，建议所有选项都选上</span><br><span class="line">7.点击 Generate token 生成令牌</span><br><span class="line">8.得到生成的令牌</span><br><span class="line">9.应用令牌</span><br><span class="line">10.修改现有的 url</span><br><span class="line">git remote set-url origin  https://&lt;your_token&gt;@github.com/&lt;USERNAME&gt;/&lt;REPO&gt;.git</span><br><span class="line">将&lt;your_token&gt;换成你自己得到的令牌。&lt;USERNAME&gt;是你自己github的用户名，&lt;REPO&gt;是你的项目名称</span><br><span class="line">然后再次执行 pull push 操作</span><br></pre></td></tr></table></figure>
+    </article>
+    <!-- license -->
     
-        
-        
-        
-        
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
             
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/04/18/%E7%90%86%E8%A7%A3%E4%B8%AD%E9%97%B4%E4%BB%B6/">
-                
-                <span class="abstract-title-text">理解中间件</span>
-            </a>
-            <div class="abstract-content">
-                中间件中间件（Middleware）是介于应用系统和系统软件之间的一类软件，它使用系统软件所提供的基础服务（功能），衔接网络上应用系统的各个部分或不同的应用，能够达到资源共享、功能共享的目的
-在NodeJS中，中间件主要是指封装http请求细节处理的方法
-例如在express、koa等web框架中，中间件的本质为一个回调函数，参数包含请求对象、响应对象和执行下一个中间件的函数
-
-            </div>
-            <!-- read more -->
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2022/10/20/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/" title="元素居中">
+                    <div class="nextTitle">元素居中</div>
+                </a>
             
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2024/04/19">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/04/18</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="node">node</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
+        </li>
+        <li class="previous">
             
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">
-                
-                <span class="abstract-title-text">通过scroll懒加载出错</span>
-            </a>
-            <div class="abstract-content">
-                当用 scrollTop+clientHeight &#x3D; scrollHeight 条件判断页面是否滚动到底时后端十页数据只加载了五页。
-原因：
-scrollHeight会四舍五入，每次滚动有0.1的小数被舍掉，所以第五页的时候左右等式不成立，导致无法加载后面数据
-解决方案：
-1.使用以下等式
-scrollHeight - clientHeight - scrollTop &lt;= 1
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
 
-2.使用vueuse的useInfiniteScroll
 
-            </div>
-            <!-- read more -->
             
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2024/04/19">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/02/18</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="css">css</a>
-    
-</div>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
     
-    <!-- paginator  -->
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
     
 </main>
 
@@ -547,6 +586,23 @@ scrollHeight - clientHeight - scrollTop &lt;= 1
 
         </div>
         <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                
+            </div>
         
         <!-- sidebar -->
         <div class="sidebar sidebar-hide">
@@ -817,6 +873,8 @@ scrollHeight - clientHeight - scrollTop &lt;= 1
         <!-- CNZZ -->
         
         <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
         
         <!-- mermaid -->
         
