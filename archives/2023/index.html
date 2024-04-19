@@ -460,6 +460,51 @@
         </article>
         <div class="index-post-divider"></div>
     
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">
+                
+                <span class="abstract-title-text">理解中间件</span>
+            </a>
+            <div class="abstract-content">
+                当用 scrollTop+clientHeight &#x3D; scrollHeight 条件判断页面是否滚动到底时后端十页数据只加载了五页。
+原因：
+scrollHeight会四舍五入，每次滚动有0.1的小数被舍掉，所以第五页的时候左右等式不成立，导致无法加载后面数据
+解决方案：
+1.使用一下等式
+scrollHeight - clientHeight - scrollTop &lt;= 1
+
+2.使用vueuse的useInfiniteScroll
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2024/04/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/02/18</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="css">css</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
     <!-- paginator  -->
     
 </main>
@@ -524,7 +569,16 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
         
         
     
@@ -533,7 +587,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -551,6 +605,12 @@
         <li class="archive-post-item">
             <span class="archive-post-date">04/18</span>
             <a class="archive-post-title" href="/2023/04/18/%E7%90%86%E8%A7%A3%E4%B8%AD%E9%97%B4%E4%BB%B6/">理解中间件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/18</span>
+            <a class="archive-post-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">理解中间件</a>
         </li>
     
         
@@ -574,6 +634,21 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
         
+            <span class="sidebar-tag-name" data-tags="vue">
+                <span class="iconfont-archer">&#xe606;</span>
+                vue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="css">
+                <span class="iconfont-archer">&#xe606;</span>
+                css
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="node">
+                <span class="iconfont-archer">&#xe606;</span>
+                node
+            </span>
+        
             <span class="sidebar-tag-name" data-tags="区块链">
                 <span class="iconfont-archer">&#xe606;</span>
                 区块链
@@ -589,11 +664,6 @@
                 Ganache
             </span>
         
-            <span class="sidebar-tag-name" data-tags="node">
-                <span class="iconfont-archer">&#xe606;</span>
-                node
-            </span>
-        
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -605,14 +675,14 @@
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="CPABE">
-            <span class="iconfont-archer">&#xe60a;</span>
-            CPABE
-        </span>
-    
         <span class="sidebar-category-name" data-categories="前端">
             <span class="iconfont-archer">&#xe60a;</span>
             前端
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="CPABE">
+            <span class="iconfont-archer">&#xe60a;</span>
+            CPABE
         </span>
     
     </div>

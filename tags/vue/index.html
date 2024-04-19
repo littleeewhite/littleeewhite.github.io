@@ -21,7 +21,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/Ganache/index.html">
+<meta property="og:url" content="http://example.com/tags/vue/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -429,37 +429,36 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2022/11/03/web3j%20%E6%95%B0%E6%8D%AE%E4%B8%8A%E9%93%BE%E5%87%AD%E8%AF%81%E7%94%9F%E6%88%90%E6%8A%A5%E9%94%99/">
+            <a class="abstract-title" href="/2023/02/18/scroll%E6%87%92%E5%8A%A0%E8%BD%BD/">
                 
-                <span class="abstract-title-text">web3j 数据上链凭证生成报错</span>
+                <span class="abstract-title-text">理解中间件</span>
             </a>
             <div class="abstract-content">
-                使用web3j通过Ganache私钥生成上链凭证时报错
- Credentials credentials =Credentials.create(privateKey);
+                当用 scrollTop+clientHeight &#x3D; scrollHeight 条件判断页面是否滚动到底时后端十页数据只加载了五页。
+原因：
+scrollHeight会四舍五入，每次滚动有0.1的小数被舍掉，所以第五页的时候左右等式不成立，导致无法加载后面数据
+解决方案：
+1.使用一下等式
+scrollHeight - clientHeight - scrollTop &lt;= 1
 
-报错如下
-Exception in thread &quot;main&quot; java.lang.ExceptionInInitializerError
-at org.web3j.crypto.Sign.&lt;clinit&gt;(Sign.java:41)
-at org.web3j.crypto.ECKeyPair.create(ECKeyPair.java:79)
-at org.web3j.crypto....
+2.使用vueuse的useInfiniteScroll
+
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
                 <div class="abstract-date" title="Last updated: 2024/04/19">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/11/03</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/02/18</span>
                 </div>
                 <!-- tags -->
                 
                     <div class= abstract-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="区块链">区块链</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="vue">vue</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="web3j">web3j</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Ganache">Ganache</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="css">css</a>
     
 </div>
 
